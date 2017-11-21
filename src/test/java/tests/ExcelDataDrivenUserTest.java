@@ -138,6 +138,7 @@ public class ExcelDataDrivenUserTest extends BaseTest {
         if (userExistenceCheck) {
             assertions.assertThat(APIUtils.verifyUserExistence(userName, userEmailID, userPassword)).isFalse();
         }
+        assertions.assertThat(newUser.verifyAllUsersButtonDisplayed()).isTrue();
         assertions.assertAll();
     }
 

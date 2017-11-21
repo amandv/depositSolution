@@ -131,6 +131,7 @@ public class DataDrivenUserTest extends BaseTest {
         if (!userConFirmPasswordErrorMessage.isEmpty()) {
             assertions.assertThat(newUser.getUserConfirmPasswordMessage()).isEqualTo(userConFirmPasswordErrorMessage);
         }
+        assertions.assertThat(newUser.verifyAllUsersButtonDisplayed()).isTrue();
         assertions.assertAll();
     }
 
